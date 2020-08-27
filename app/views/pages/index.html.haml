@@ -4,6 +4,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:charset => "UTF-8"}/
     %title Homepage
+    = stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'nav', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'homepage', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'footer', media: 'all', 'data-turbolinks-track': 'reload'
@@ -17,7 +18,7 @@
     .navigation-wrapper
       .left-column
         .icon
-          .fas.fa-phone-volume
+          %i.fas.fa-phone-volume
         .contact-hours-wrapper
           .phone
             555 555 5555
@@ -43,7 +44,7 @@
             France, Paris, 775563
         .contact-icon
           %a{:href => "contact.html"}
-            .fas.fa-map-marker-alt
+            %i.fas.fa-map-marker-alt
     .hero-section
       .top-heading
         %h1 HTML Styled Fries
@@ -59,7 +60,7 @@
             Amet accusantium laborum exercitationem quia quod Quo cum.
         .column
           / icons goes here
-          %i.fas.fa-wifi
+          .fa.fa-wifi
           %p You can code from here
           %p
             Amet accusantium laborum exercitationem quia quod Quo cum.
