@@ -1,2 +1,100 @@
-%h1 
-  Hello!
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title Homepage
+    = stylesheet_link_tag 'nav', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'homepage', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'footer', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'common', media: 'all', 'data-turbolinks-track': 'reload'
+    %link{:href => "https://fonts.googleapis.com/css2?family=Roboto&display=swap", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap", :rel => "stylesheet"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewort"}/
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %body
+    .navigation-wrapper
+      .left-column
+        .icon
+          .fas.fa-phone-volume
+        .contact-hours-wrapper
+          .phone
+            555 555 5555
+          .hours
+            10 AM - MIDNIGHT
+      .center-column
+        .banner-image
+          = image_tag("logos/decamp-fantastic-fries-logo-white.png", alt: "Logo")
+        .links-wrapper
+          .nav-link
+            %a{:href => "index.html"} Home
+          .nav-link
+            %a{:href => "about.html"} About
+          .nav-link
+            %a{:href => "menu.html"} Menu
+          .nav-link
+            %a{:href => "contact.html"} Contact
+      .right-column
+        .address-wrapper
+          %a{:href => "contact.html"}
+            123 Any street
+            %br/
+            France, Paris, 775563
+        .contact-icon
+          %a{:href => "contact.html"}
+            .fas.fa-map-marker-alt
+    .hero-section
+      .top-heading
+        %h1 HTML Styled Fries
+      .bottom-heading
+        %h3 Coding fuel
+    .features-section
+      .columns-wrapper
+        .column
+          / icons goes here
+          %i.fas.fa-truck-monster
+          %p We Deliver
+          %p
+            Amet accusantium laborum exercitationem quia quod Quo cum.
+        .column
+          / icons goes here
+          %i.fas.fa-wifi
+          %p You can code from here
+          %p
+            Amet accusantium laborum exercitationem quia quod Quo cum.
+        .column
+          / icons goes here
+          %i.fas.fa-chart-line
+          %p 100+ types of fries!
+          %p
+            Amet accusantium laborum exercitationem quia quod Quo cum.
+    %div
+      %iframe{:allowfullscreen => "", "aria-hidden" => "false", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1054.9866901308453!2d135.09298066218315!3d48.48186507779015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5efae896839919d5%3A0x1398bfdd603f4ac5!2z0J4t0L_QuNGG0YbQsA!5e0!3m2!1sru!2sae!4v1598446918655!5m2!1sru!2sae", :style => "border:0;", :tabindex => "0", :width => "100%"}
+    .footer
+      .logo-footer
+        = image_tag("logos/decamp-fantastic-fries-logo-white.png", alt: "Logo")
+      .footer-phone-hours
+        %span.phone
+          555 555 5555
+        %span.hours
+          10 am - midnight
+      .links-wrapper
+        .nav-link
+          %a{:href => "index.html"} Home
+        .nav-link
+          %a{:href => "about.html"} About
+        .nav-link
+          %a{:href => "menu.html"} Menu
+        .nav-link
+          %a{:href => "contact.html"} Contact
+      .social-media-icons-wrapper
+        %a{:href => "#"}
+          %i.fab.fa-instagram
+        %a{:href => "#"}
+          %i.fab.fa-twitter
+        %a{:href => "#"}
+          %i.fab.fa-facebook-f
+      .copyright-wrapper
+        © 2020 IDnilov | All rights reserved
+
