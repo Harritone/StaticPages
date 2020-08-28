@@ -6,6 +6,7 @@
     %title About
     = stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'nav', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'common', media: 'all', 'data-turbolinks-track': 'reload'
     %link{:href => "https://fonts.googleapis.com/css2?family=Roboto&display=swap", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap", :rel => "stylesheet"}/
@@ -13,7 +14,7 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
   %body
     .skewed-header
-      .header-bg
+      .header-bg{ style: "background-image: url(#{image_path 'backgrounds/fries-about-bg.jpg'}); background-position: center;" }
       .skewed-header-wrapper
         .skewed-header-content
           .heading-wrapper
