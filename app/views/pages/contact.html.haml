@@ -1,0 +1,94 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title COntact
+    = stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'nav', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'common', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'footer', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'skewed-header', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'page-container', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'helpers', media: 'all', 'data-turbolinks-track': 'reload'
+    %link{:href => "https://fonts.googleapis.com/css2?family=Roboto&display=swap", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap", :rel => "stylesheet"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewort"}/
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %body
+    .skewed-header
+      .header-bg{ style: "background-image: url(#{image_path 'backgrounds/contact.jpg'}); background-position: center;" }
+      .skewed-header-wrapper
+        .skewed-header-content
+          .heading-wrapper
+            %h1
+              Contact
+          .links-wrapper
+            .nav-link
+              = link_to "Home", root_path
+            .nav-link
+              = link_to "About", about_path
+            .nav-link
+              = link_to "Menu", menu_path
+            .nav-link
+              = link_to "Contact", contact_path
+    .page-container
+      %h1
+        I'm in page container
+      .contacg-grid-wrapper
+        .comany-meadata-sidebar-wrapper
+          .logo
+            = image_tag("logos/decamp-dark.png", alt: "Logo")
+          .company-details-wrpper
+            %i.fas.fa-map-marker-alt
+          .company-details-wrpper
+            .address
+              123 Any St
+              %br
+              Scottsdale, Az, 85251
+          .company-details-wrpper
+            %i.fas.fa-phone-volume
+              .phone
+                555 555 5555
+          .company-details-wrpper
+            %i.far.fa-clock
+              .clock
+                10 AM - MIDNIGHT
+        .form
+          .form-group
+            Name
+          .form-group
+            Email
+          .form-group
+            message
+          .centerd-btn-wrapper
+            %button{type: 'submit'}
+              Send
+  .spacer60
+  .footer
+    .logo-footer
+      = image_tag("logos/decamp-fantastic-fries-logo-white.png", alt: "Logo")
+    .footer-phone-hours
+      %span.phone
+        555 555 5555
+      %span.hours
+        10 am - midnight
+    .links-wrapper
+      .nav-link
+        = link_to "Home", root_path
+      .nav-link
+        = link_to "About", about_path
+      .nav-link
+        = link_to "Menu", menu_path
+      .nav-link
+        = link_to "Contact", contact_path
+    .social-media-icons-wrapper
+      %a{:href => "#"}
+        %i.fab.fa-instagram
+      %a{:href => "#"}
+        %i.fab.fa-twitter
+      %a{:href => "#"}
+        %i.fab.fa-facebook-f
+    .copyright-wrapper
+      © 2020 IDnilov | All rights reserved
