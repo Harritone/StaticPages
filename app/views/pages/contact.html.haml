@@ -11,6 +11,7 @@
     = stylesheet_link_tag 'skewed-header', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'page-container', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'helpers', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'contact', media: 'all', 'data-turbolinks-track': 'reload'
     %link{:href => "https://fonts.googleapis.com/css2?family=Roboto&display=swap", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap", :rel => "stylesheet"}/
@@ -35,33 +36,37 @@
               = link_to "Contact", contact_path
     .page-container
       %h1
-        I'm in page container
-      .contacg-grid-wrapper
-        .comany-meadata-sidebar-wrapper
+      .contact-grid-wrapper
+        .comapany-metadata-sidebar-wrapper
           .logo
             = image_tag("logos/decamp-dark.png", alt: "Logo")
-          .company-details-wrpper
+          .company-details-wrapper
             %i.fas.fa-map-marker-alt
-          .company-details-wrpper
             .address
               123 Any St
               %br
               Scottsdale, Az, 85251
-          .company-details-wrpper
+          .company-details-wrapper
             %i.fas.fa-phone-volume
-              .phone
-                555 555 5555
-          .company-details-wrpper
+            .phone
+              555 555 5555
+          .company-details-wrapper
             %i.far.fa-clock
-              .clock
-                10 AM - MIDNIGHT
+            .time
+              10 AM - MIDNIGHT
         .form
           .form-group
-            Name
+            %input{type: 'text', id: 'fullname', placeholder: 'Your Name'}
+            %label{for: "fullname"}
+              Your name
           .form-group
-            Email
+            %input{type: 'email', id: 'email', placeholder: 'Your Email'}
+            %label{for: "email"}
+              Your Email
           .form-group
-            message
+            %textarea{type: 'text', id: 'message', placeholder: 'Message'}
+            %label{ :for => "massage" }
+              Message
           .centerd-btn-wrapper
             %button{type: 'submit'}
               Send
