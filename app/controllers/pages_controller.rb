@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  layout 'homepage', only: ['index']
+
   def index
   end
 

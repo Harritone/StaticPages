@@ -1,4 +1,4 @@
-@media screen and (max-width: 615px) {
+@media (max-width: 615px) {
   .navigation-wrapper {
     flex-direction: column;
     height: 100%;
@@ -30,5 +30,22 @@
     margin-bottom: 10px;
     font-size: 1.5em;
     width: 100%;
+  }
+
+  .hero-section {
+    padding: 50px 10px;
+  }
+  
+  .features-section {
+    height: 100%;
+  }
+
+  .features-section > .columns-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .footer {
+    height: 100%;
   }
 }
