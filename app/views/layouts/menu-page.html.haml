@@ -3,17 +3,16 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title StaticPages
+    %title Menu
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'common', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'nav', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'common', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'footer', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'skewed-header', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'page-container', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'square-grid', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'helpers', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'square-grid', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'media-queries', media: 'all', 'data-turbolinks-track': 'reload'
     %link{:href => "https://fonts.googleapis.com/css2?family=Roboto&display=swap", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap", :rel => "stylesheet"}/

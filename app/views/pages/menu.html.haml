@@ -1,131 +1,113 @@
-!!!
-%html{:lang => "en"}
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "UTF-8"}/
-    %title 
-      Menu
-    = stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'nav', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'common', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'footer', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'skewed-header', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'helpers', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag 'square-grid', media: 'all', 'data-turbolinks-track': 'reload'
-    %link{:href => "https://fonts.googleapis.com/css2?family=Roboto&display=swap", :rel => "stylesheet"}/
-    %link{:href => "https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap", :rel => "stylesheet"}/
-    %link{:href => "https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap", :rel => "stylesheet"}/
-    %meta{:content => "width=device-width, initial-scale=1", :name => "viewort"}/
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-  %body
-    .skewed-header
-      .header-bg{ style: "background-image: url(#{image_path 'backgrounds/menu.jpg'}); background-position: center;" }
-      .skewed-header-wrapper
-        .skewed-header-content
-          .heading-wrapper
-            %h1
-              Menu
-          .links-wrapper
-            .nav-link
-              = link_to "Home", root_path
-            .nav-link
-              = link_to "About", about_path
-            .nav-link
-              = link_to "Menu", menu_path
-            .nav-link
-              = link_to "Contact", contact_path
-  .squares-wrapper
-    .squares
-      .square
-        .img-wrapper
-          = image_tag("squares/fries2.jpg", alt: 'Fries')
-        .square-text-wrapper
-          %a{:href => "#spicy", name: 'spicy', class: 'anchor-link'}
-            %h1
-              Spicy
-          %ul
-            %li
-              Dolor totam doloribus rerum voluptate fugiat? Natus sequi.
-            %li
-              Consectetur harum tempore veritatis corporis nesciunt Tenetur tempora?
-            %li
-              Ipsum quis ea unde ullam porro expedita Nisi
-            %li
-              Dolor dicta assumenda quia esse voluptatum aliquid. Suscipit
-              
-      .square
-        .square-text-wrapper
-          %a{:href => "#medium", name: 'medium', class: 'anchor-link'}
-            %h1
-              Medium
-          %ol
-            %li
-              Dolor iure in laboriosam corrupti quaerat error
-            %li
-              Adipisicing eum vitae exercitationem quasi officia? Consequuntur corporis.
-            %li
-              Lorem incidunt labore mollitia debitis tempora Atque molestiae tempora
-            %li
-              Sit ex et adipisicing ipsa labore Repellat.
-      .square
-        .img-wrapper
-          = image_tag("squares/fries2.jpg", alt: 'Fries')
-        .square-text-wrapper
-          %a{:href => "#mild", name: 'mild', class: 'anchor-link'}
-            %h1
-              Mild
-          %ul
-            %li
-              Dolor totam doloribus rerum voluptate fugiat? Natus sequi.
-            %li
-              Consectetur harum tempore veritatis corporis nesciunt Tenetur tempora?
-            %li
-              Ipsum quis ea unde ullam porro expedita Nisi
-            %li
-              Dolor dicta assumenda quia esse voluptatum aliquid. Suscipit
-              
-      .square
-        .square-text-wrapper
-          %a{:href => "#noflavor", name: 'noflavor', class: 'anchor-link'}
-            %h1
-              No Flavor
-          %ul
-            %li
-              Dolor iure in laboriosam corrupti quaerat error
-            %li
-              Adipisicing eum vitae exercitationem quasi officia? Consequuntur corporis.
-            %li
-              Lorem incidunt labore mollitia debitis tempora Atque molestiae tempora
-            %li
-              Sit ex et adipisicing ipsa labore Repellat.
-              
-        .img-wrapper
-          = image_tag("squares/fries1.jpg", alt: 'Fries')
+.skewed-header
+  .header-bg{ style: "background-image: url(#{image_path 'backgrounds/menu.jpg'}); background-position: center;" }
+  .skewed-header-wrapper
+    .skewed-header-content
+      .heading-wrapper
+        %h1
+          Menu
+      .links-wrapper
+        .nav-link
+          = link_to "Home", root_path
+        .nav-link
+          = link_to "About", about_path
+        .nav-link
+          = link_to "Menu", menu_path
+        .nav-link
+          = link_to "Contact", contact_path
+.squares-wrapper
+  .squares
+    .square
+      .img-wrapper
+        = image_tag("squares/fries2.jpg", alt: 'Fries')
+      .square-text-wrapper
+        %a{:href => "#spicy", name: 'spicy', class: 'anchor-link'}
+          %h1
+            Spicy
+        %ul
+          %li
+            Dolor totam doloribus rerum voluptate fugiat? Natus sequi.
+          %li
+            Consectetur harum tempore veritatis corporis nesciunt Tenetur tempora?
+          %li
+            Ipsum quis ea unde ullam porro expedita Nisi
+          %li
+            Dolor dicta assumenda quia esse voluptatum aliquid. Suscipit
             
-  .spacer60
-  .footer
-    .logo-footer
-      = image_tag("logos/decamp-fantastic-fries-logo-white.png", alt: "Logo")
-    .footer-phone-hours
-      %span.phone
-        555 555 5555
-      %span.hours
-        10 am - midnight
-    .links-wrapper
-      .nav-link
-        = link_to "Home", root_path
-      .nav-link
-        = link_to "About", about_path
-      .nav-link
-        = link_to "Menu", menu_path
-      .nav-link
-        = link_to "Contact", contact_path
-    .social-media-icons-wrapper
-      %a{:href => "#"}
-        %i.fab.fa-instagram
-      %a{:href => "#"}
-        %i.fab.fa-twitter
-      %a{:href => "#"}
-        %i.fab.fa-facebook-f
-    .copyright-wrapper
-      © 2020 IDnilov | All rights reserved
+    .square
+      .square-text-wrapper
+        %a{:href => "#medium", name: 'medium', class: 'anchor-link'}
+          %h1
+            Medium
+        %ol
+          %li
+            Dolor iure in laboriosam corrupti quaerat error
+          %li
+            Adipisicing eum vitae exercitationem quasi officia? Consequuntur corporis.
+          %li
+            Lorem incidunt labore mollitia debitis tempora Atque molestiae tempora
+          %li
+            Sit ex et adipisicing ipsa labore Repellat.
+      .img-wrapper
+        = image_tag("squares/fries1.jpg", alt: 'Fries')
+    .square
+      .img-wrapper
+        = image_tag("squares/fries2.jpg", alt: 'Fries')
+      .square-text-wrapper
+        %a{:href => "#mild", name: 'mild', class: 'anchor-link'}
+          %h1
+            Mild
+        %ul
+          %li
+            Dolor totam doloribus rerum voluptate fugiat? Natus sequi.
+          %li
+            Consectetur harum tempore veritatis corporis nesciunt Tenetur tempora?
+          %li
+            Ipsum quis ea unde ullam porro expedita Nisi
+          %li
+            Dolor dicta assumenda quia esse voluptatum aliquid. Suscipit
+            
+    .square
+      .square-text-wrapper
+        %a{:href => "#noflavor", name: 'noflavor', class: 'anchor-link'}
+          %h1
+            No Flavor
+        %ul
+          %li
+            Dolor iure in laboriosam corrupti quaerat error
+          %li
+            Adipisicing eum vitae exercitationem quasi officia? Consequuntur corporis.
+          %li
+            Lorem incidunt labore mollitia debitis tempora Atque molestiae tempora
+          %li
+            Sit ex et adipisicing ipsa labore Repellat.
+            
+      .img-wrapper
+        = image_tag("squares/fries1.jpg", alt: 'Fries')
+          
+.spacer60
+.footer
+  .logo-footer
+    = image_tag("logos/decamp-fantastic-fries-logo-white.png", alt: "Logo")
+  .footer-phone-hours
+    %span.phone
+      555 555 5555
+    %span.hours
+      10 am - midnight
+  .links-wrapper
+    .nav-link
+      = link_to "Home", root_path
+    .nav-link
+      = link_to "About", about_path
+    .nav-link
+      = link_to "Menu", menu_path
+    .nav-link
+      = link_to "Contact", contact_path
+  .social-media-icons-wrapper
+    %a{:href => "#"}
+      %i.fab.fa-instagram
+    %a{:href => "#"}
+      %i.fab.fa-twitter
+    %a{:href => "#"}
+      %i.fab.fa-facebook-f
+  .copyright-wrapper
+    © 2020 IDnilov | All rights reserved
