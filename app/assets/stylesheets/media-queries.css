@@ -14,6 +14,9 @@
     order: 1;
     width: 100%;
   }
+.navigation-wrapper > .center-column > .banner-image img {
+  width: 190px;
+}
 
   .navigation-wrapper > .right-column{
     order: 3;
@@ -33,7 +36,7 @@
   }
 
   .hero-section {
-    padding: 50px 10px;
+    padding: 50px 10px ;
   }
   
   .features-section {

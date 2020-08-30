@@ -65,7 +65,7 @@
 }
 
 .navigation-wrapper > .center-column > .banner-image img {
-  align: center;
+  text-align: center;
   width: 216px;
   height: 100%;
 }
